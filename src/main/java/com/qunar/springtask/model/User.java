@@ -1,6 +1,6 @@
 package com.qunar.springtask.model;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * @author hongqin.luo
@@ -15,10 +15,9 @@ public class User {
     private String gender;
     private Integer age;
     private String note;
-    private String address;//家庭地址
-    private boolean available;//是否可用
-    private Timestamp createTime;//创建时间
-    private Timestamp lastModifyTime;//最后编辑时间
+    private String address;
+    private Date createTime;
+    private Date updateTime;
 
     public Integer getUserId() {
         return userId;
@@ -92,27 +91,19 @@ public class User {
         this.address = address;
     }
 
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
-
-    public Timestamp getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Timestamp createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public Timestamp getLastModifyTime() {
-        return lastModifyTime;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setLastModifyTime(Timestamp lastModifyTime) {
-        this.lastModifyTime = lastModifyTime;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }
